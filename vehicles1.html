@@ -1,0 +1,368 @@
+
+<html>
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <META> element to your page <HEAD>.      -->
+<!--  If necessary, please modify the charset parameter to specify the        -->
+<!--  character set of your HTML page.                                        -->
+<!--  ----------------------------------------------------------------------  -->
+
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: Please add the following <FORM> element to your page.             -->
+<!--  ----------------------------------------------------------------------  -->
+
+<form action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+
+<input type=hidden name="oid" value="00D1m0000008pTi">
+<input type=hidden name="retURL" value="https://salem.framer.website/page">
+<input type=hidden name="RecordTypeId" value="0121m000001F94SAAS">
+
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="humairabegum212@gmail.com">                                      -->
+<!--  ----------------------------------------------------------------------  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"   
+ />   
+    <title>Vehicles</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4070f4;
+}
+
+.container {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 15px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container header {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Blue lIne in Header */
+.container header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 3px;
+  width: 27px;
+  border-radius: 8px;
+  background-color: #4070f4;
+}
+
+.container .forms {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 16px;
+  min-height: 500px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.container .forms .fields .input-field {
+  line-height: 4;
+}
+
+.container .forms .fields2 .input-field {
+  line-height: 4;
+}
+
+.input-field label {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+
+.input-field input,
+select {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+}
+
+.container form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  margin: 40px auto 0px;
+  width: 20%;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #4070f4;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.container form .btnText {
+  font-size: 14px;
+  font-weight: 400;
+}
+form button:hover {
+  background-color: #265df2;
+}
+
+form button i {
+  margin: 0 6px;
+}
+</style>
+  </head>
+<body>
+<div class="container">
+      <header>Vehicles</header>
+      <form action="/createCard" id="create-form">
+        <div class="forms first">
+          <div class="details1">
+            <label for="salutation">Salutation</label><select  id="salutation" name="salutation"><option value="">--None--</option><option value="Mr.">Mr.</option>
+	    <option value="Ms.">Ms.</option>
+	<option value="Mrs.">Mrs.</option>
+	<option value="Dr.">Dr.</option>
+	<option value="Prof.">Prof.</option>
+	<option value="Mx.">Mx.</option>
+	</select><br />
+
+
+            <div class="fields">
+              <div class="input-field">
+                <label for="first_name">First Name</label><input  id="first_name" name="first_name" type="text" 
+                  placeholder="First Name"
+                  
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="last_name">Last Name</label><input  id="last_name" name="last_name" type="text"
+
+                  placeholder="Last Name"
+                 
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="company">Company</label><input  id="company"  name="company"  type="text" 
+
+                  placeholder="Company"
+                 
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="lead_source">Lead Source</label><select  id="lead_source" name="lead_source"><option value="">--None--</option><option value="Web">Web</option>
+		<option value="Phone Inquiry">Phone Inquiry</option>
+		<option value="Partner Referral">Partner Referral</option>
+		<option value="Purchased List">Purchased List</option>
+		<option value="Other">Other</option>
+		</select>
+                <br />
+              </div>
+
+              <div class="input-field">
+               <label for="industry">Industry</label><select  id="industry" name="industry"><option value="">--None--</option>
+<option value="Apparel">Apparel</option>
+<option value="Communications">Communications</option>
+<option value="Construction">Construction</option>
+<option value="Consulting">Consulting</option>
+<option value="Electronics">Electronics</option>
+<option value="Energy">Energy</option>
+<option value="Engineering">Engineering</option>
+<option value="Finance">Finance</option>
+<option value="Food &amp; Beverage">Food &amp; Beverage</option>
+<option value="Insurance">Insurance</option>
+<option value="Machinery">Machinery</option>
+<option value="Manufacturing">Manufacturing</option>
+<option value="Not For Profit">Not For Profit</option>
+<option value="Other">Other</option>
+<option value="Technology">Technology</option>
+<option value="Telecommunications">Telecommunications</option>
+<option value="Transportation">Transportation</option>
+</select>
+              </div>
+
+              <div class="input-field">
+                <label for="phone">Phone</label><input  id="phone" name="phone" type="text" 
+
+		placeholder="Phone"
+		/>
+              </div>
+
+              <div class="input-field">
+                <label for="email">Email</label>
+		<input  id="email" name="email" type="text"
+		
+		placeholder="email"
+		/>
+              </div>
+
+              <div class="input-field">
+                <label for="url">Website</label><input  id="url" name="url" type="text" 
+
+                  placeholder="Website"
+                  />
+              </div>
+
+              <div class="input-field">
+                <label for="country">Country</label>
+		<input  id="country"  name="country" type="text"
+
+                  placeholder="Country"
+                 />
+              </div>
+
+              <div class="input-field">
+                <label for="state">State/Province</label>
+		<input  id="state"  name="state" type="text"
+                  placeholder="State/Province"
+                 
+                />
+              </div>
+               <div class="input-field">
+                <label for="city">City</label>
+		<input  id="city" name="city" type="text" 
+		placeholder="City" required 
+		/>
+              </div>
+
+            </div>
+          </div>
+          <div class="details2">
+            <div class="fields2">
+              <div class="input-field">
+                <label for="street">Street</label>
+		<textarea name="street"></textarea>
+
+              </div>
+
+              <div class="input-field">
+                <label for="zip">Zip</label>
+		<input  id="zip" name="zip" type="text" 
+		placeholder="Zip"
+		/>
+              </div>
+
+              <div class="input-field">
+		<label>GST Number :</label>
+		<input  id="00N1m000008bBO4" name="00N1m000008bBO4" type="text" 
+                  placeholder="Gst Number"
+                
+                />
+              </div>
+
+              <div class="input-field">
+                <label for="recordType">Vendor Type</label>
+		<select  id="recordType" name="recordType">
+		<option value="0121m000001F94S">Vehicles</option>
+		</select><br>
+
+              </div>
+
+              <div class="input-field">
+		<label for="Product Type">Product Type :</label>
+                <select  id="00N1m000008bBKb" name="00N1m000008bBKb" title="Product Type"><option value="">--None--</option>
+		<option value="Car">Car</option>
+		<option value="Bike">Bike</option>
+		</select>
+              </div>
+
+              <div class="input-field">
+                <label>Product Name :</label>
+                <input  
+		id="00N1m000008bBL5" 
+		name="00N1m000008bBL5" 
+		type="text" 
+
+                  placeholder="Product Name"
+                  
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Module Name :</label>
+                <input  id="00N1m000008bBEs"  name="00N1m000008bBEs"  type="text"
+
+                  placeholder="Module Name"
+                 
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Warranty Period :</label>
+                <input  id="00N1m000008bBLU" name="00N1m000008bBLU"  type="text"
+
+                  placeholder="Warranty Period"
+                  
+                />
+              </div>
+
+              <div class="input-field">
+                <label>Product Quantity :</label>
+                <input  id="00N1m000008bBME" name="00N1m000008bBME"  type="text" 
+
+                  placeholder="Product Quantity"
+                  
+                />
+              </div>
+               <div class="input-field">
+                <label>Price Per Product :</label>
+                <input  id="00N1m000008bBKJ" name="00N1m000008bBKJ"  type="text"
+
+                  placeholder="Price Per Product"
+                  
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="nextBtn" type="submit">
+          <span class="btnText">Submit</span>
+          <i class="uil uil-navigator"></i>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
+    
